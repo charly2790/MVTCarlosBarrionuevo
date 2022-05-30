@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Familiares</title>
+    <style>
+        h1{
+          text-align: center;
+          color: red  
+        }
+
+        p{
+            margin-left: 3px;
+            color: yellow;
+        }
+        
+        .card{
+            border: 1 px solid black;
+            background-color: black;
+            margin: 1%;            
+            width: 31.33%;
+            float: left;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h1>Mis Familiares</h1>
+    {%for familiar in familiares%}
+    <div class="card">
+        <p>Nro. Documento: {{familiar.dni}}</p>
+        <p>Nombre: {{familiar.name}}</p>
+        <p>Apellido: {{familiar.surname}}</p>
+        <p>Fecha Nacimiento: {{familiar.birthday}}</p>
+    </div>
+    {%endfor%}
+</body>
+</html>
